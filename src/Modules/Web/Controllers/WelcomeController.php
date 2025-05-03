@@ -14,7 +14,6 @@ declare(strict_types=1);
 
 namespace App\Modules\Web\Controllers;
 
-use App\Models\User;
 use Borlotti\Core\Api\DateInterface;
 use Borlotti\Core\Api\EncryptInterface;
 use Borlotti\Core\Api\JsonInterface;
@@ -30,7 +29,6 @@ class WelcomeController extends BaseController
     /**
      * Class constructor.
      *
-     * @param User $user
      * @param LoggerInterface $logger
      * @param EncryptInterface $encrypt
      * @param JsonInterface $json
@@ -38,7 +36,6 @@ class WelcomeController extends BaseController
      * @param SessionInterface $session
      */
     public function __construct(
-        protected User $user,
         protected LoggerInterface $logger,
         protected EncryptInterface $encrypt,
         protected JsonInterface $json,
@@ -51,8 +48,7 @@ class WelcomeController extends BaseController
     public function index(Request $request, Response $response): ResponseInterface
     {
         try {
-            $result = $this->user->find(1);
-            return $this->render('welcome/index.twig', ['user' => $result], $request, $response);
+            return $this->render('welcome/index.twig', [], $request, $response);
         } catch ( \Exception $e) {
             $this->logger->error($e->getMessage());
             $response->getBody()->write($e->getMessage());
