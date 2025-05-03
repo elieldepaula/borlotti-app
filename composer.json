@@ -1,0 +1,22 @@
+{
+  "name": "elieldepaula/borlotti-app",
+  "description": "This is the app repository for Borlotti Project.",
+  "scripts": {
+    "start": "php -S localhost:8080 -t public"
+  },
+  "require": {
+    "php": "^8.2",
+    "elieldepaula/borlotti-core": "dev-master"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/elieldepaula/borlotti-core.git"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  }
+}
