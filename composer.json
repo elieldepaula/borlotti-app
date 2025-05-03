@@ -2,7 +2,8 @@
   "name": "elieldepaula/borlotti-app",
   "description": "This is the app repository for Borlotti Project.",
   "scripts": {
-    "start": "php -S localhost:8080 -t public"
+    "start": "php -S localhost:8080 -t public",
+    "migrate": "php vendor/elieldepaula/borlotti-core/src/Database/Migration.php migrate"
   },
   "require": {
     "php": "^8.2",
