@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Borlotti App - Beta</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1a202c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 700px;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: #2d3748;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #ecc94b;
+            color: #744210;
+            padding: 0.25rem 0.6rem;
+            font-size: 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .logo {
+            display: block;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            width: 150px;
+            height: 150px;
+            object-fit: cover; /* Garante que a imagem cubra o círculo */
+            border-radius: 50%; /* Deixa a imagem circular */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve para destaque */
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: #4a5568;
+            text-align: left;
+        }
+
+        ul.features {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        ul.features li::before {
+            content: "✔️";
+            margin-right: 0.5rem;
+            color: green;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #a0aec0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <p><img src="{{ asset('images/borlotti.png') }}" class="logo" alt="Logo"></p>
+    <h1>Welcome to Borlotti App</h1>
+    <div class="badge">Beta</div>
+    <p>Congratulations! You have successfully installed the <b>Borlotti App</b>. Your environment is ready for development.</p>
+    <h2>🚀 Features</h2>
+    <ul class="features">
+        <li>Dependency Injection</li>
+        <li>Twig</li>
+        <li>PSR-7</li>
+        <li>CSRF</li>
+        <li>Database</li>
+        <li>Eloquent</li>
+        <li>PHP Dotenv</li>
+        <li>Logger</li>
+        <li>Migrations</li>
+        <li>Seeders</li>
+    </ul>
+
+    <a href="{{ url_for('examples-lib') }}">Some basic examples with the available libraries.</a>
+
+    <div class="footer">
+        This is the default Borlotti App welcome page &mdash; replace it in production.
+    </div>
+</div>
+</body>
+</html>
