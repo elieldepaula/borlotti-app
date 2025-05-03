@@ -50,5 +50,5 @@ ini_set('display_errors', $configs[ENVIRONMENT]['display_errors']);
 $app = new Bootstrap();
 $app->setRoutes(require APP_PATH . 'Etc/Routes.php')
     ->setDependencies(require APP_PATH . 'Etc/Di.php')
-    ->setTemplatesPath(APP_PATH)
+    ->setTemplatesPath(require APP_PATH . 'Etc/TemplateLoader.php')
     ->run();

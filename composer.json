@@ -3,7 +3,8 @@
   "description": "This is the app repository for Borlotti Project.",
   "scripts": {
     "start": "php -S localhost:8080 -t public",
-    "migrate": "php vendor/elieldepaula/borlotti-core/src/Database/Migration.php migrate"
+    "migrate": "php vendor/elieldepaula/borlotti-core/src/Database/Migration.php migrate",
+    "migration": "php vendor/elieldepaula/borlotti-core/src/Database/Migration.php "
   },
   "require": {
     "php": "^8.2",
