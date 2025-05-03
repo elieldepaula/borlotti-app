@@ -2,6 +2,28 @@
 
 This is the app repository for the Borlotti Project.
 
+## Insatallation
+
+Create project with composer
+
+```sh
+composer create-project elieldepaula/borlotti-app project-name dev-master --repository='{"type":"vcs", "url":"https://github.com/elieldepaula/borlotti-app.git"}'
+```
+
+Create env file
+
+```sh 
+cp .env.example .env
+```
+
+Run the project using PHP server
+
+```shell
+composer run start
+```
+
+Check the project on http://localhost:8080
+
 # The MIT License (MIT)
 Copyright (c) 2025 Eliel de Paula Permission is hereby granted, free of charge, to any person obtaining a copy of this
 software and associated documentation files (the "Software"), to deal in the Software without restriction, including
