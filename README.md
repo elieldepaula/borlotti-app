@@ -2,7 +2,7 @@
 
 This is the app repository for the Borlotti Project.
 
-## Insatallation
+## Installation
 
 Create project with composer
 
